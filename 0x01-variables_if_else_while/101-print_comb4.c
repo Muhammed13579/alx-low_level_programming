@@ -8,20 +8,20 @@
  */
 int main(void)
 {
-	int a, b, c;
+	int d, p, q;
 
-	for (a = '0'; a <= '9'; a++)
+	for (d = '0'; d <= '9'; d++)
 	{
-		for (b = a + 1; b <= '9'; b++)
+		for (p = d + 1; p <= '9'; p++)
 		{
-			for (c = b + 1; c <= '9'; c++)
+			for (q = p + 1; q <= '9'; q++)
 			{
-				if ((a != b) != c)
+				if ((d != p) != q)
 				{
-					putchar(a);
-					putchar(b);
-					putchar(c);
-					if (a == '6' && b == '7' && c == '8')
+					putchar(d);
+					putchar(p);
+					putchar(q);
+					if (d == '6' && p == '7' && q == '8')
 						continue;
 					putchar(',');
 					putchar(' ');
