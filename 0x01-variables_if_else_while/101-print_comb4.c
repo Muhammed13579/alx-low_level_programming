@@ -8,26 +8,32 @@
  */
 int main(void)
 {
-	int d, p, q;
+	int d = 48, a = 48, i = 48;
 
-	for (d = '0'; d < '9'; d++)
+	while (d < 58)
 	{
-		for (p = d + 1; p <= '9'; p++)
+		i = 48;
+		while (a < 58)
 		{
-			for (q = p + 1; q <= '9'; q++)
+			i = 48;
+			while (i < 58)
 			{
-				if ((d != p) != q)
+				if (d != a && a != i && d != i && d < a && a < i)
 				{
 					putchar(d);
-					putchar(p);
-					putchar(q);
-					if (d == '6' && p == '7' && q == '8')
-						continue;
-					putchar(',');
-					putchar(' ');
+					putchar(a);
+					putchar(i);
+					if (!(d == 55 && a == 56 && i == 57))
+					{
+						putchar(',');
+						putchar(' ');
+					}
 				}
+				i++;
 			}
+			a++;
 		}
+		d++;
 	}
 	putchar('\n');
 	return (0);
