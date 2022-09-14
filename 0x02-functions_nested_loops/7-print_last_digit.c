@@ -2,23 +2,24 @@
 /**
  * print_last_digit - print the last digit of a number
  *
- * @n: input number of an interger
+ * @r: input number of an interger
  *
  * Return last digit of number
  */
-int print_last_digit(int n)
+int print_last_digit(int r)
 {
-	int l;
+	int n;
 
-	l = n % 10;
-	if (l < 0)
+	if (r < 0)
 	{
-		_putchar(-l + 48);
-		return (-l);
+		n = -1 * (r % 10);
 	}
-	else
+	else 
 	{
-		_putchar(l + 48);
-		return (l);
+		n = r % 10;
 	}
+	_putchar((n % 10) + '0');
+	return (n % 10);
 }
+
+
