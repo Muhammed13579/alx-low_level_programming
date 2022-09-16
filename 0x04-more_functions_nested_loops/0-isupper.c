@@ -6,14 +6,18 @@
  */
 int _isupper(int c)
 {
-	int c;
+	char uppercase = 'A';
+	int isupper = 0;
 
-	if (c >= 65; && c <= 90)
+	for (; uppercase <= 'z'; uppercase++)
 	{
-		return (1);
+		if (c == uppercase)
+		{
+			isupper = 1
+				break;
+		}
 	}
-	else
-	{
-		return (0);
-	}
+
+	return (isupper);
 }
+
